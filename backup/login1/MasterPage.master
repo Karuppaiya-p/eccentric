@@ -1,0 +1,127 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head runat="server">
+    <title>Untitled Page</title>
+</head>
+<body bgcolor="black" bottommargin="0" leftmargin="0" rightmargin="0" topmargin="0">
+    <form id="form1" runat="server">
+    <div>
+        <table style="width: 953px; height: 410px">
+            <tr>
+                <td colspan="2" style="height: 15%" valign="top">
+                    <img src="../images/logo11.jpg" style="width: 650px; height: 105px;" />
+                    <asp:Label ID="Label4" runat="server" Font-Italic="True" Font-Size="Small" ForeColor="White"
+                        Style="z-index: 100; left: 764px; position: absolute; top: 42px" Width="160px"></asp:Label>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" style="width: 100%; height: 3px">
+                    <table style="width: 923px; height: 1px">
+                        <tr>
+                            <td style="width: 24%; height: 42%">
+                            </td>
+                            <td style="width: 100%; height: 42%">
+                                <asp:Menu ID="Menu1" runat="server" BackColor="Black" BorderColor="Black" BorderWidth="1px"
+                                    DynamicHorizontalOffset="2" Font-Bold="False" Font-Names="Times New Roman" Font-Size="Medium"
+                                    ForeColor="#666666" Height="24px" Orientation="Horizontal"
+                                    StaticSubMenuIndent="10px" Width="485px">
+                                    <StaticMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
+                                    <DynamicHoverStyle BackColor="#666666" ForeColor="White" />
+                                    <DynamicMenuStyle BackColor="#E3EAEB" />
+                                    <StaticSelectedStyle BackColor="#1C5E55" />
+                                    <DynamicSelectedStyle BackColor="#1C5E55" />
+                                    <DynamicMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
+                                    <Items>
+                                        <asp:MenuItem NavigateUrl="~/login1/homelogin.aspx" Text="Home" Value="Home"></asp:MenuItem>
+                                        <asp:MenuItem NavigateUrl="~/login1/aboutlogin.aspx" Text="About" Value="About"></asp:MenuItem>
+                                        <asp:MenuItem NavigateUrl="~/login1/eventslogin.aspx" Text="Events" Value="Events"></asp:MenuItem>
+                                        <asp:MenuItem NavigateUrl="~/login1/achivementslogin.aspx" Text="Achievements" Value="Achivements">
+                                        </asp:MenuItem>
+                                    </Items>
+                                    <StaticHoverStyle BackColor="#666666" ForeColor="White" />
+                                </asp:Menu>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td style="width: 23%; height: 100%" valign="top">
+                    <img src="../images/login11.jpg" style="width: 215px; height: 355px" />
+                    <table style="z-index: 100; left: 4px; width: 191px; position: absolute; top: 218px;
+                        height: 152px">
+                        <tr>
+                            <td colspan="3" style="text-align: center">
+                        <asp:LinkButton ID="aboulinkbut" runat="server" Font-Bold="True" Font-Underline="True"
+                            ForeColor="Gray" OnClick="aboulinkbut_Click" Style="position: static;" Width="115px">About Login</asp:LinkButton></td>
+                        </tr>
+                        <tr>
+                            <td colspan="3" style="text-align: center">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="3" style="text-align: center">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="3" style="text-align: center; height: 40px;">
+                                <strong>
+                                &nbsp;<span style="color: white">Sign in to Eccentric wtih your Email ID</span></strong></td>
+                        </tr>
+                        <tr>
+                            <td style="width: 67px">
+                                <asp:Label ID="Label1" runat="server" Font-Bold="True" Font-Size="Small" ForeColor="White"
+                                    Text="Email ID  :" Width="58px"></asp:Label></td>
+                            <td style="width: 5px">
+                                <asp:TextBox ID="txtusername" runat="server" BackColor="White" ForeColor="Black"
+                                    Width="105px"></asp:TextBox></td>
+                            <td>
+                                <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtusername"
+                                    ErrorMessage="*"></asp:RequiredFieldValidator></td>
+                        </tr>
+                        <tr>
+                            <td style="width: 67px">
+                                <asp:Label ID="Label2" runat="server" Font-Bold="True" Font-Size="Small" ForeColor="White"
+                                    Text="Password :" Width="42px"></asp:Label></td>
+                            <td style="width: 5px">
+                                <asp:TextBox ID="txtpassword" runat="server" BackColor="White" ForeColor="Black"
+                                    Width="104px" TextMode="Password"></asp:TextBox></td>
+                            <td>
+                                <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txtpassword"
+                                    ErrorMessage="*"></asp:RequiredFieldValidator></td>
+                        </tr>
+                        <tr>
+                            <td align="center" colspan="3">
+                                <asp:Label ID="Label5" runat="server" Font-Bold="True" Font-Size="Large" ForeColor="White"
+                                    Height="19px" Text="Label" Visible="False" Width="28px"></asp:Label></td>
+                        </tr>
+                        <tr>
+                            <td align="center" colspan="3">
+                                <asp:Button ID="Button1" runat="server" BackColor="Gray" BorderColor="Black" Font-Bold="True"
+                                    Font-Size="Small" OnClick="Button1_Click" Text="Login" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="center" colspan="3">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="center" colspan="3">
+                                <asp:LinkButton ID="forgetlinkbut" runat="server" Font-Bold="True" Font-Size="Medium"
+                                    Font-Underline="True" ForeColor="Gray" OnClick="forgetlinkbut_Click" Width="200px" CausesValidation="False">Forgotten the pass word</asp:LinkButton></td>
+                        </tr>
+                    </table>
+                </td>
+                <td style="height: 100%" valign="top">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+                </td>
+            </tr>
+        </table>
+    </div>
+    </form>
+</body>
+</html>
